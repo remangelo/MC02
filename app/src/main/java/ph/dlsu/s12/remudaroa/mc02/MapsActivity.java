@@ -46,8 +46,10 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.maps.android.SphericalUtil;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -223,6 +225,151 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                         if(task.isSuccessful()){
                             Log.d(TAG, "onComplete: found location!");
                             Location currentLocation = (Location) task.getResult();
+
+                            LatLng currentCoords = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
+
+                            DecimalFormat df = new DecimalFormat("#,###,##0.00");
+                            mMap.setInfoWindowAdapter(new CustomInfoWindowAdapter(MapsActivity.this));
+                            LatLng coords;
+
+                            /*
+                                Adding Quarantine Facilities Markers
+                            * */
+
+                            coords = new LatLng(14.60657573706729, 121.02360211788726);
+                            MarkerOptions options = new MarkerOptions()
+                                    .position(coords)
+                                    .title("San Juan Medical Center")
+                                    .snippet("Address: 71 N Domingo St, San Juan, 1500 Metro Manila, Philippines\n" +
+                                            "Contact: +63287243266\n" +
+                                            "Capacity: 73\n" + "Distance from location: " + df.format(SphericalUtil.computeDistanceBetween(coords, currentCoords)/1000) + " KM");
+                            mMarker = mMap.addMarker(options);
+
+                            coords = new LatLng(14.611430543695239, 121.05516241728166);
+                            options = new MarkerOptions()
+                                    .position(coords)
+                                    .title("Calutan Training Center")
+                                    .snippet("Address: 1109, 502 Epifanio de los Santos Ave, Cubao, Quezon City, 1109 Metro Manila, Philippines\n" +
+                                            "Contact: No Available Data\n" +
+                                            "Capacity: 87\n" + "Distance from location: " + df.format(SphericalUtil.computeDistanceBetween(coords, currentCoords)/1000) + " KM");
+                            mMarker = mMap.addMarker(options);
+
+                            coords = new LatLng(14.597815418892251, 121.04553296225201);
+                            options = new MarkerOptions()
+                                    .position(coords)
+                                    .title("Cardinal Santos Medical Center")
+                                    .snippet("Address: 10 Wilson, Greenhills West, San Juan, 1502 Metro Manila, Philippines\n" +
+                                            "Contact: +63287270001\n" +
+                                            "Capacity: 48\n" + "Distance from location: " + df.format(SphericalUtil.computeDistanceBetween(coords, currentCoords)/1000) + " KM");
+                            mMarker = mMap.addMarker(options);
+
+                            coords = new LatLng(14.581054470643778, 121.04291313050021);
+                            options = new MarkerOptions()
+                                    .position(coords)
+                                    .title("National Center For Mental Health, Mandaluyong City")
+                                    .snippet("Address: Nueve de Pebrero St., Mauway, Mandaluyong, Metro Manila, Philippines\n" +
+                                            "Contact: +63285319001\n" +
+                                            "Capacity: 30\n" + "Distance from location: " + df.format(SphericalUtil.computeDistanceBetween(coords, currentCoords)/1000) + " KM");
+                            mMarker = mMap.addMarker(options);
+
+                            coords = new LatLng(14.58350927408578, 121.04422104756158);
+                            options = new MarkerOptions()
+                                    .position(coords)
+                                    .title("Neptali A. Gonzales High School Facility (MPNAG), Mandaluyong City")
+                                    .snippet("Address: Nueve De Pebrero St. Mauway, Mandaluyong, Metro Manila, Philippines\n" +
+                                            "Contact: No Available Data\n" +
+                                            "Capacity: 150\n" + "Distance from location: " + df.format(SphericalUtil.computeDistanceBetween(coords, currentCoords)/1000) + " KM");
+                            mMarker = mMap.addMarker(options);
+
+                            coords = new LatLng(14.577329036115614, 121.03448498714863);
+                            options = new MarkerOptions()
+                                    .position(coords)
+                                    .title("Makeshift Hospital, Maysilo Circle Brgy. Plainview (Old Mandaluyong Gym)")
+                                    .snippet("Address: Maysilo Cir, Mandaluyong, Metro Manila, Philippines\n" +
+                                            "Contact: No Available Data\n" +
+                                            "Capacity: 30" + "Distance from location: " + df.format(SphericalUtil.computeDistanceBetween(coords, currentCoords)/1000) + " KM");
+                            mMarker = mMap.addMarker(options);
+
+                            coords = new LatLng(14.571488456916098, 121.04435499536285);
+                            options = new MarkerOptions()
+                                    .position(coords)
+                                    .title("South Sikap Brgy. Plainview Quarantine Facility, Mandaluyong")
+                                    .snippet("Address: 291 Dansalan Rd, Mandaluyong, Metro Manila, Philippines\n" +
+                                            "Contact: No Available Data\n" +
+                                            "Capacity: 10\n" + "Distance from location: " + df.format(SphericalUtil.computeDistanceBetween(coords, currentCoords)/1000) + " KM");
+                            mMarker = mMap.addMarker(options);
+
+                            coords = new LatLng(14.550436111618646, 121.02209674368552);
+                            options = new MarkerOptions()
+                                    .position(coords)
+                                    .title("Hotel Celeste")
+                                    .snippet("Address: 02 San Lorenzo Drive Corner A. Arnaiz Avenue, San Lorenzo Village, Makati, 1223 Metro Manila\n" +
+                                            "Contact: +63288878080\n" +
+                                            "Capacity: 20\n" + "Distance from location: " + df.format(SphericalUtil.computeDistanceBetween(coords, currentCoords)/1000) + " KM");
+                            mMarker = mMap.addMarker(options);
+
+                            coords = new LatLng(14.570242461042557, 121.03010392908726);
+                            options = new MarkerOptions()
+                                    .position(coords)
+                                    .title("Poblacion Health Center")
+                                    .snippet("Address: A. Mabini St, Makati, 1210 Metro Manila\n" +
+                                            "Contact: +63288995014\n" +
+                                            "Capacity: 9\n" + "Distance from location: " + df.format(SphericalUtil.computeDistanceBetween(coords, currentCoords)/1000) + " KM");
+                            mMarker = mMap.addMarker(options);
+
+                            coords = new LatLng(14.56713715865379, 121.05044189258233);
+                            options = new MarkerOptions()
+                                    .position(coords)
+                                    .title("Makati Friendship Suites")
+                                    .snippet("Address: Guadalupe Bliss, Phase 3 Brgy, Makati, Metro Manila, Philippines\n" +
+                                            "Contact: No Available Data\n" +
+                                            "Capacity: 11\n" + "Distance from location: " + df.format(SphericalUtil.computeDistanceBetween(coords, currentCoords)/1000) + " KM");
+                            mMarker = mMap.addMarker(options);
+
+                            coords = new LatLng(14.487973951749593, 121.06279199205055);
+                            options = new MarkerOptions()
+                                    .position(coords)
+                                    .title("Lakeshore Hall")
+                                    .snippet("Address: 393 C-6, Lower Bicutan, Taguig, Metro Manila\n" +
+                                            "Contact: No Available Data\n" +
+                                            "Capacity: 40\n" + "Distance from location: " + df.format(SphericalUtil.computeDistanceBetween(coords, currentCoords)/1000) + " KM");
+                            mMarker = mMap.addMarker(options);
+
+                            coords = new LatLng(14.54734104619811, 121.05988538543392);
+                            options = new MarkerOptions()
+                                    .position(coords)
+                                    .title("Pembo Elementary School")
+                                    .snippet("Address: Dahlia Street, Pembo, Makati City, Metro Manila, Philippines\n" +
+                                            "Contact: +63288821129\n" +
+                                            "Capacity: 45\n" + "Distance from location: " + df.format(SphericalUtil.computeDistanceBetween(coords, currentCoords)/1000) + " KM");
+                            mMarker = mMap.addMarker(options);
+
+                            coords = new LatLng(14.546096662981123, 121.06216201887713);
+                            options = new MarkerOptions()
+                                    .position(coords)
+                                    .title("Ospital ng Makati Parking")
+                                    .snippet("Address: Sampaguita St, Makati, 1218 Metro Manila, Philippines\n" +
+                                            "Contact: +63288826316\n" +
+                                            "Capacity: 15\n" + "Distance from location: " + df.format(SphericalUtil.computeDistanceBetween(coords, currentCoords)/1000) + " KM");
+                            mMarker = mMap.addMarker(options);
+
+                            coords = new LatLng(14.572329335462218, 121.06550033256218);
+                            options = new MarkerOptions()
+                                    .position(coords)
+                                    .title("Dahlia Hotel")
+                                    .snippet("Address: Christian Rte, Pasig, Metro Manila, Philippines\n" +
+                                            "Contact: +639497090186\n" +
+                                            "Capacity: 300\n" + "Distance from location: " + df.format(SphericalUtil.computeDistanceBetween(coords, currentCoords)/1000) + " KM");
+                            mMarker = mMap.addMarker(options);
+
+                            coords = new LatLng(14.546812955997947, 121.0669481547294);
+                            options = new MarkerOptions()
+                                    .position(coords)
+                                    .title("Pateros Evacuation Building, 2nd Floor")
+                                    .snippet("Address: 321 P. Herrera, Pateros, Metro Manila, Philippines\n" +
+                                            "Contact: No Available Data\n" +
+                                            "Capacity: 4\n" + "Distance from location: " + df.format(SphericalUtil.computeDistanceBetween(coords, currentCoords)/1000) + " KM");
+                            mMarker = mMap.addMarker(options);
 
                             moveCamera(new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude()),
                                     DEFAULT_ZOOM,
