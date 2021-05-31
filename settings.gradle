@@ -1,2 +1,3 @@
 include ':app'
 rootProject.name = "MC02"
+include ':QR_Maker'

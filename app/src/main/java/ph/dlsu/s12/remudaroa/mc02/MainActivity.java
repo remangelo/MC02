@@ -2,6 +2,7 @@ package ph.dlsu.s12.remudaroa.mc02;
 
 import android.app.Dialog;
 import android.content.Intent;
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,10 +15,10 @@ import com.google.android.gms.common.GoogleApiAvailability;
 
 public class MainActivity extends AppCompatActivity  {
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "QRActivity";
 
     private static final int ERROR_DIALOG_REQUEST = 9001;
-
+    Button btnMap, btnQrCode, btnLocationHistory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +31,34 @@ public class MainActivity extends AppCompatActivity  {
     }
 
     private void init(){
-        Button btnMap = (Button) findViewById(R.id.btnMap);
+
+        btnMap = (Button) findViewById(ph.dlsu.s12.remudaroa.mc02.R.id.btnMap);
+        btnQrCode = (Button) findViewById(ph.dlsu.s12.remudaroa.mc02.R.id.btnQRCode);
+        btnLocationHistory = (Button) findViewById(ph.dlsu.s12.remudaroa.mc02.R.id.btnLocation);
+
         btnMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, MapsActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        btnQrCode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent qrIntent = new Intent();
+                qrIntent.setClassName(getPackageName(), "ph.dlsu.s12.remudaroa.qr_maker.QRActivity");
+                startActivity(qrIntent);
+            }
+        });
+
+        btnLocationHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent qrIntent = new Intent();
+                qrIntent.setClassName(getPackageName(), "ph.dlsu.s12.remudaroa.qr_maker.LocationHistoryActivity");
+                startActivity(qrIntent);
             }
         });
     }

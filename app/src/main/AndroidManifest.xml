@@ -44,6 +44,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".MapsActivity"/>
+
+
+        <activity android:name="ph.dlsu.s12.remudaroa.qr_maker.QRActivity"/>
+        <activity android:name="ph.dlsu.s12.remudaroa.qr_maker.LocationHistoryActivity"/>
     </application>
 
 </manifest>

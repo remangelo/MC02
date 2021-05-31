@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "787330245972",
+    "firebase_url": "https://mc02-bf044-default-rtdb.firebaseio.com",
+    "project_id": "mc02-bf044",
+    "storage_bucket": "mc02-bf044.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787330245972:android:a397415ddbd7d0c23f14c1",
+        "android_client_info": {
+          "package_name": "ph.dlsu.s12.remudaroa.mc02"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787330245972-fc04gcr5b58ahkti4rdq21o1h8te69bo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGdXZFi4iqVGcP8bSEu9npfbMQ-U188ZE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787330245972-fc04gcr5b58ahkti4rdq21o1h8te69bo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787330245972:android:9e01b1855bc607583f14c1",
+        "android_client_info": {
+          "package_name": "ph.dlsu.s12.remudaroa.qr_maker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787330245972-fc04gcr5b58ahkti4rdq21o1h8te69bo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGdXZFi4iqVGcP8bSEu9npfbMQ-U188ZE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787330245972-fc04gcr5b58ahkti4rdq21o1h8te69bo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787330245972:android:8efe8d67d89dd7c33f14c1",
+        "android_client_info": {
+          "package_name": "ph.dlsu.s12.remudaroa.qr_reader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787330245972-fc04gcr5b58ahkti4rdq21o1h8te69bo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGdXZFi4iqVGcP8bSEu9npfbMQ-U188ZE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787330245972-fc04gcr5b58ahkti4rdq21o1h8te69bo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

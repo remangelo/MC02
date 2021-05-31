@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QRActivity">
+
+    <ImageView
+        android:id="@+id/IV_qrcode"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/qr_code"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="36dp"
+        android:text="Name: "
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/IV_qrcode" />
+
+    <EditText
+        android:id="@+id/ET_fullname"
+        android:layout_width="287dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginRight="16dp"
+        android:hint="Enter your Full Name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/IV_qrcode" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="28dp"
+        android:text="Address: "
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ET_fullname" />
+
+    <EditText
+        android:id="@+id/ET_address"
+        android:layout_width="288dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="16dp"
+        android:hint="Enter your Address"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ET_fullname" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:text="Contact \nNumber:"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ET_address" />
+
+    <EditText
+        android:id="@+id/ET_contactNumber"
+        android:layout_width="284dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:maxLength="12"
+        android:inputType="number"
+        android:hint="Enter your contact number"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ET_address" />
+
+    <EditText
+        android:id="@+id/ET_age"
+        android:layout_width="104dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="200dp"
+        android:inputType="number"
+        android:maxLength="3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ET_contactNumber" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="24dp"
+        android:text="Age:"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ET_contactNumber" />
+
+    <Button
+        android:id="@+id/btn_create"
+        android:layout_width="387dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/generate_qr_code"
+        app:layout_constraintTop_toBottomOf="@id/ET_age"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteX="12dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

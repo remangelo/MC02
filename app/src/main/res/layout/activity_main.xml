@@ -6,14 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/TV_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="32sp"
+        android:layout_marginTop="100dp"
+        android:text="COVIDON'T Application"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
     <Button
+        android:id="@+id/btnMap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
         android:text="@string/map_button"
-        android:id="@+id/btnMap"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+       app:layout_constraintTop_toBottomOf="@+id/TV_header"/>
+
+    <Button
+        android:id="@+id/btnQRCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="QR Code Generator"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnMap" />
+
+    <Button
+        android:id="@+id/btnLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="View Location History"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnQRCode" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
