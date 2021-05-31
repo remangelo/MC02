@@ -27,11 +27,12 @@
         android:layout_width="384dp"
         android:layout_height="43dp"
         android:text="Main"
+        android:textColor="@color/white"
         app:backgroundTint="#000000"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:elevation="10dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="650dp"
          />
 
 </RelativeLayout>
